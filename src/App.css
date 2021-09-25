@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  border: 0;
+  background: rgb(253, 155, 144);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 25em;
+  height: 35em;
+  background: salmon;
+  border-radius: 7px;
+  margin-top: 7em;
+  box-shadow: 0px 1px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title__label{
+  background: transparent;
+  margin-top: 0.5em;
+}
+
+.birtdays_ul {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.birthdays_li{
+  align-items: center;
+  display: flex;
+  margin-top: 2em;
+  gap: 2em;
+}
+
+.delete__btn{
+  padding: 1em 2em;
+  border: 1px solid red;
+  background: none;
+  color: #f2f2f2;
+  border-radius: 10px ;
+}
+
+.delete__btn:hover{
+  padding: 1em 2em;
+  border: #f2f2f2;
+  background: red;
+  color: #f2f2f2;
+  border-radius: 10px ;
+}
+
+
+.delete__btn {
+  align-self: center;
+  justify-self: flex-end;
+}
