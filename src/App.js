@@ -1,10 +1,10 @@
 import './App.css';
-import BirthdayChallenge from "./components/BirthdaysChallenge"
+import TourApp from "./components/ToursApp"
 
 function App() {
   return (
     <div>
-    <BirthdayChallenge />
+    <TourApp />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   border: 0;
-  background: rgb(253, 155, 144);
+  background: #f2f2f2;
 }
 
 body {
@@ -9,6 +9,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+
+/* BIRTHDAYS APP */
 
 .main {
   width: 25em;
@@ -61,4 +64,60 @@ body {
 .delete__btn {
   align-self: center;
   justify-self: flex-end;
+}
+
+
+/* OUR TOUR APP */
+
+
+.tour__app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title__div {
+  display: flex;
+  flex-direction: column;
+}
+
+.brrrrr{
+  border: 2px solid salmon;
+  width: 50px;
+}
+
+.tour__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  background: #dfdfdf;
+  margin-bottom: 50px;
+  border-radius: 15px ;
+  box-shadow: 0px 1px 3px;
+}
+
+.tour__caption{
+  background: none;
+}
+
+.tour__image{
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 20rem;
+}
+
+.tour__price{
+  background: #87e3ff;
+}
+
+.wrapper__tp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour__title{
+  background: none;
 }
