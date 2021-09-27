@@ -3,11 +3,13 @@ import {tourData} from './tourData'
 
 const TourApp = () => {
     const [tours, setTours] = useState(tourData)
-    console.log(tours);
+    const [more, setMore] = useState(false)
 
     const deleteTours = (ev) => {
-        const newTours = tours.filter((tour) => tour.id !== ev)
-        setTours(newTours)
+        ev.preventDefault()
+        // const newTours = tours.filter(tour => tour.id !== tour.id)
+        // setTours(newTours)
+        setTours(tours.filter(tour => tour.id !== tour.id)) 
     }
 
     return <>
@@ -30,13 +32,10 @@ const TourApp = () => {
             <h3 className="tour__price">${price}</h3>
             </div>
 
-            <h4 className="tour__caption">{caption}
-             <a onClick={() => console.log("eccome")}
-             >{caption.length === caption.length ? "Show less" : "Show more"}
-             </a></h4>
+            <h4 className="tour__caption">{more === false ? caption.substr(0, 250) : caption}
+            <a onClick={() => setMore(!more)}> {more === false ? "more" : "less"}</a></h4>
              <button
-             onClick={deleteTours} 
-
+             onClick={deleteTours}
              style={{padding : "1em 2em", 
              border : "1px solid red", 
              background:"transparent", 
