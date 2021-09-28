@@ -1,16 +1,17 @@
 import React , {useState} from "react"
-import {tourData} from './tourData'
+import {tourData} from '../data/tourData'
 
 const TourApp = () => {
     const [tours, setTours] = useState(tourData)
     const [more, setMore] = useState(false)
 
-    const deleteTours = (ev) => {
-        ev.preventDefault()
-        // const newTours = tours.filter(tour => tour.id !== tour.id)
-        // setTours(newTours)
-        setTours(tours.filter(tour => tour.id !== tour.id)) 
-    }
+    // const deleteTours = (ev) => {
+    //     ev.preventDefault()
+    //     // const newTours = tours.filter(tour => tour.id !== tour.id)
+    //     // setTours(newTours)
+    //     let newTours = tours.filter(tour => tour.id !== tour.id)
+    //     setTours(newTours)
+    // }
 
     return <>
     <section className="tour__app">
@@ -35,7 +36,7 @@ const TourApp = () => {
             <h4 className="tour__caption">{more === false ? caption.substr(0, 250) : caption}
             <a onClick={() => setMore(!more)}> {more === false ? "more" : "less"}</a></h4>
              <button
-             onClick={deleteTours}
+             onClick={() => {setTours(tours.filter(tour => tour.id !== tour.id))}}
              style={{padding : "1em 2em", 
              border : "1px solid red", 
              background:"transparent", 

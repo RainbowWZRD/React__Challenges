@@ -1,10 +1,10 @@
 import './App.css';
-import TourApp from "./components/ToursApp"
+import ReviewsApp from "./components/ReviewsApp"
 
 function App() {
   return (
     <div>
-    <TourApp />
+    <ReviewsApp />
     </div>
   );
 }
