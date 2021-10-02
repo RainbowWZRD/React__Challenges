@@ -47,23 +47,29 @@ background: none;
 `
 
 export const PersonImg = styled.img`
-height: 25px;
+height: 50px;
+width: 50px;
 border-radius: 50px;
+background: none;
 `
 
 export const PersonName = styled.h1`
 font-size: 16px;
 color: white;
+background: none;
 `
 
 export const PersonWork = styled.p`
 font-size: 16px;
 color: salmon;
+background: none;
 `
 
 export const PersonCaption = styled.p`
 font-size: 13px;
 color: white;
+background: none;
+text-align: center;
 `
 
 export const IconsWrapper = styled.div`

@@ -1,48 +1,46 @@
 import React , {useState, useEffect} from "react"
 import {reviewsData} from "../data/reviewsData"
-import {
-    ReviewArticle,
-    TitleWrapper,
-    ReviewTitle,
-    ReviewBrrrrrr,
-    PersonWrapper,
-    PersonImg,
-    PersonName,
-    PersonWork,
-    PersonCaption,
-    IconsWrapper,
-    IconLeft,
-    IconRight
-} from "./ReviewAppElements"
 
-const data = reviewsData
+const people = reviewsData
+console.log(people);
 
 const ReviewsApp = () => {
-    const [people, setPeople] = useState(data) 
-    const [current , setCurrent ] = useState(0)
+    const [index, setIndex] = useState(1)
+    const  {id, name, work, caption, profilePic} = reviewsData[index]
 
-    console.log(people);
+    console.log(people.length);
 
+    const next = () => {
+        setIndex((index) => {
+            let newIndex = index + 1
+            return newIndex
+            console.log(newIndex);
+        })
+    }
+
+    const prev = () => {
+        setIndex((index) => {
+            let newIndex = index - 1
+            return newIndex
+            console.log(newIndex);
+        })
+    }
     return <>
-    <ReviewArticle>
-    <TitleWrapper>
-        <ReviewTitle>ReviewsApp</ReviewTitle>
-        <ReviewBrrrrrr />
-    </TitleWrapper>
-
-    <PersonWrapper >
-     <PersonImg />
-    <PersonName></PersonName>
-    <PersonWork></PersonWork>
-    <PersonCaption></PersonCaption>
-
-    <IconsWrapper>
-        <IconLeft />
-        <IconRight />
-    </IconsWrapper>
-    </PersonWrapper>
-
-    </ReviewArticle>
+    <ul>
+        <li key={id}>
+            <p>{name}</p>
+            <img style={{width: "50px"}}
+             src={profilePic} />
+            <p>{work}</p>
+            <p>{caption}</p>
+            <button
+            onClick={prev}
+            >Prev</button>
+            <button
+            onClick={next}
+            >Next</button>
+        </li>
+    </ul>
     </>
 }
 
